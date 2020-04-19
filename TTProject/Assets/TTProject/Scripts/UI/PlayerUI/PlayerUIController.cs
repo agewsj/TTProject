@@ -71,4 +71,9 @@ public class PlayerUIController : MonoBehaviour
 
         monster.HitMonster((int)player.p_Info.attack);
     }
+
+    public void SetStageClear()
+    {
+        player.SetInitPlayer();
+    }
 }

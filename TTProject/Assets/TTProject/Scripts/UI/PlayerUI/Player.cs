@@ -12,6 +12,12 @@ public class Player : Common
 {
     public PlayerInfo p_Info;
 
+    public void SetInitPlayer()
+    {
+        SetAnimatorState(AnimationState.Idle);
+        SetInitNormalAttackEffect();
+    }
+
     public void SetPlayerInfo()
     {
         p_Info.attack = 5;

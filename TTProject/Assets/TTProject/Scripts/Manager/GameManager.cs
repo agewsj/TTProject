@@ -55,8 +55,8 @@ public class GameManager : SingleTon<GameManager>
                 stageThemeNum = 0;
             }
         }
-        
-        UIManager.Instance.stageController.SetStageTexture((Stage)stageThemeNum);
+
+        UIManager.Instance.SetStageClear(stageThemeNum);
 
         StartCoroutine(dellayStopStageMove());
     }

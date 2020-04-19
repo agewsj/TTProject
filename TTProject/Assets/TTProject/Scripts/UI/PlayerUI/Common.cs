@@ -55,6 +55,17 @@ public class Common : MonoBehaviour
     public Vector2 attackEffectPos = Vector2.zero;
 
 
+    public void SetInitNormalAttackEffect()
+    {
+        if (attackCoroutine != null)
+        {
+            Debug.Log("Stop Attack Coroutine");
+            StopCoroutine(attackCoroutine);
+        }
+
+        attackEffect.gameObject.SetActive(false);
+    }
+
     public void SetActiveNormalAttackEffect()
     {
         if (attackEffect == null)

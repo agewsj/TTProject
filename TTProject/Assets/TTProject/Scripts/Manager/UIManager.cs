@@ -25,4 +25,11 @@ public class UIManager : SingleTon<UIManager>
     {        
         playerUIController.AttackPlayer();
     }
+
+    public void SetStageClear(int _stageThemeNum)
+    {
+        playerUIController.SetStageClear();
+
+        stageController.SetStageTexture((Stage)_stageThemeNum);
+    }
 }
