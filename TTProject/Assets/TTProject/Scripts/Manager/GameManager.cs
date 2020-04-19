@@ -18,6 +18,7 @@ public class GameManager : SingleTon<GameManager>
     private void Start()
     {                
         UIManager.Instance.InitUIManager();
+        SoundManager.Instance.PlayBGSound(0);
     }
 
     private void Update()
@@ -28,6 +29,7 @@ public class GameManager : SingleTon<GameManager>
         if (Input.GetMouseButtonUp(0))
         {
             UIManager.Instance.SetPlayerAttack();
+            SoundManager.Instance.PlayAttackSound();            
         }
     }
 
@@ -57,6 +59,7 @@ public class GameManager : SingleTon<GameManager>
         }
 
         UIManager.Instance.SetStageClear(stageThemeNum);
+        SoundManager.Instance.StopAttackSound();
 
         StartCoroutine(dellayStopStageMove());
     }
