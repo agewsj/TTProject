@@ -759,10 +759,10 @@ PlayerSettings:
     m_VersionCode: 1
     m_VersionName: 
   apiCompatibilityLevel: 6
-  cloudProjectId: 
+  cloudProjectId: 3f0c4384-701a-47b3-86ba-a0003301c4a1
   framebufferDepthMemorylessMode: 0
-  projectName: 
-  organizationId: 
+  projectName: TTProject
+  organizationId: jun-jae-kyaung
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0
