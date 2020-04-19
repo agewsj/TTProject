@@ -9,16 +9,14 @@ public class GameManager : SingleTon<GameManager>
     public bool isStageClear = false;
 
     private void Awake()
-    {
+    {        
+        Initialized();
+
         DontDestroyOnLoad(this);
     }
 
     private void Start()
-    {
-        stageNum = 0;
-        stageThemeNum = 0;
-        isStageClear = false;
-
+    {                
         UIManager.Instance.InitUIManager();
     }
 
@@ -33,12 +31,21 @@ public class GameManager : SingleTon<GameManager>
         }
     }
 
+    public void Initialized()
+    {
+        Screen.sleepTimeout = SleepTimeout.NeverSleep;
+
+        stageNum = 0;
+        stageThemeNum = 0;
+        isStageClear = false;
+    }
+
     public void SetStageClear()
     {
         isStageClear = true;
 
         stageNum = stageNum + 1;
-        if (stageNum == 2)
+        if (stageNum == 4)
         {
             stageNum = 0;
             stageThemeNum++;
@@ -48,8 +55,7 @@ public class GameManager : SingleTon<GameManager>
                 stageThemeNum = 0;
             }
         }
-
-        Debug.Log(stageThemeNum);
+        
         UIManager.Instance.stageController.SetStageTexture((Stage)stageThemeNum);
 
         StartCoroutine(dellayStopStageMove());

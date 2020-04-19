@@ -22,9 +22,7 @@ public class UIManager : SingleTon<UIManager>
     }
 
     public void SetPlayerAttack()
-    {
-        Debug.Log("PlayerAttack");
-
+    {        
         playerUIController.AttackPlayer();
     }
 }
