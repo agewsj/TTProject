@@ -3,10 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
-public class Mercenery : MonoBehaviour
+public class Mercenery : Common
 {
-    public void PingpongAni()
-    {
-        
-    }
+    
 }

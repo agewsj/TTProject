@@ -526,16 +526,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerUIController
       objectReference: {fileID: 0}
-    - target: {fileID: 9149560740338276394, guid: 6e349fcab0b0fdb49945facf9dac43f6,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9149560740338276394, guid: 6e349fcab0b0fdb49945facf9dac43f6,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e349fcab0b0fdb49945facf9dac43f6, type: 3}
 --- !u!224 &1233690550 stripped

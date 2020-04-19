@@ -5,10 +5,10 @@ using UnityEngine.UI;
 
 public enum Stage
 {
-    Stage1 = 0,
-    Stage2 = 3,
-    Stage3 = 6,
-    Stage4 = 9
+    Stage1,
+    Stage2,
+    Stage3,
+    Stage4
 }
 
 public class StageController : MonoBehaviour
@@ -45,7 +45,7 @@ public class StageController : MonoBehaviour
 
         for (int i = 0; i < stageRawImageList.Count; i++)
         {
-            stageRawImageList[i].texture = stageImageList[i + (int)stageState];
+            stageRawImageList[i].texture = stageImageList[i + ((int)stageState * 3)];
         }        
     }
 }

@@ -8,13 +8,19 @@ public struct PlayerInfo
 }
 
 
-public class Player : MonoBehaviour
+public class Player : Common
 {
-
     public PlayerInfo p_Info;
 
     public void SetPlayerInfo()
     {
         p_Info.attack = 5;
+    }
+
+    public void SetAttack()
+    {
+        SetAnimatorState(AnimationState.Attack);
+
+        SetActiveNormalAttackEffect();
     }
 }

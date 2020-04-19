@@ -10,7 +10,7 @@ public struct MonsterInfo
 }
 
 
-public class Monster : MonoBehaviour
+public class Monster : Common
 {
     public Slider monsterHpBar;
     public MonsterInfo m_Info;
@@ -31,7 +31,9 @@ public class Monster : MonoBehaviour
         m_Info.Nowhp = m_Info.Nowhp - _damage;
 
         SetMonsterUI();
-    }
+
+        SetAnimatorState(AnimationState.Hit);
+    }    
 
     public void SetMonsterUI()
     {        
